@@ -69,6 +69,8 @@ header nav img {
   height: 32px;
   padding: 0 16px;
   background-color: #4d4d4d;
+  -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease; /* Время изменения цвета */
 }
 header nav img:hover {
   -webkit-transform: scale(1.2);
@@ -88,6 +90,8 @@ header button {
   background-color: #4d4d4d;
   border: none;
   margin: 25px 30px 0px 0px;
+  -webkit-transition: all 0.4s ease;
+          transition: all 0.4s ease; /* Время изменения цвета */
 }
 header button:hover {
   cursor: pointer;
@@ -101,6 +105,7 @@ header button:active {
       -ms-transform: scale(0.8);
           transform: scale(0.8);
 }
+
 header .VK {
   display: inline-block; /* Строчно-блочный элемент */
   position: relative; /* Относительное позиционирование */
@@ -155,17 +160,18 @@ header .git:hover::after {
 
 .one {
   width: 1000px;
-  height: 395px;
+  height: 500px;
   background-color: #4d4d4d;
   border-radius: 25px;
   -webkit-box-shadow: 7px 7px 10px #000;
           box-shadow: 7px 7px 10px #000;
   margin-bottom: 80px;
 }
+
+
 .one h2 {
   font-weight: 600;
   font-size: 48px;
-  background-color: #4d4d4d;
   border-radius: 25px;
   margin-left: 20px;
   margin-bottom: 15px;
@@ -175,26 +181,22 @@ header .git:hover::after {
   font-weight: 400;
   font-size: 24px;
   text-indent: 20px;
-  background-color: #4d4d4d;
   margin-bottom: 40px;
 }
 .one .p2 {
   font-weight: 500;
   font-size: 20px;
   margin-left: 25px;
-  background-color: #4d4d4d;
   margin-bottom: 20px;
 }
 .one ul {
   list-style: disc;
   margin-left: 55px;
-  background-color: #4d4d4d;
 }
 .one li {
   font-weight: 400;
   font-size: 18px;
   line-height: 20pt;
-  background-color: #4d4d4d;
   color: rgb(0, 185, 0);
   width: 200px;
   margin: 0;
@@ -202,6 +204,8 @@ header .git:hover::after {
 .one li a {
   color: rgb(0, 185, 0);
   text-decoration: none;
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease; /* Время изменения цвета */
 }
 .one li:hover, .one a:hover {
   color: rgb(57, 126, 25);
@@ -458,10 +462,10 @@ header .git:hover::after {
   left: -25px;
 }
 
-.up {
+.back-to-top {
   position: fixed;
-  right: 10px;
-  bottom: 200px;
+  right: 50px;
+  bottom: 50px;
   width: 50px;
   height: 50px;
   border-color: transparent;
@@ -469,13 +473,13 @@ header .git:hover::after {
   background-color: #2e2e2e;
 }
 
-.up:hover, .up:focus {
+.back-to-top:hover, .back-to-top:focus {
   -webkit-filter: brightness(1.5);
           filter: brightness(1.5);
   outline: none;
 }
 
-.up::before, .up::after {
+.back-to-top::before, .back-to-top::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -485,7 +489,7 @@ header .git:hover::after {
           transform: translate(-50%, -50%);
 }
 
-.up::before {
+.back-to-top::before {
   width: 5px;
   height: 25px;
   border-top-left-radius: 3px;
@@ -493,7 +497,7 @@ header .git:hover::after {
   background-color: #f5f0f6;
 }
 
-.up::after {
+.back-to-top::after {
   width: 15px;
   height: 15px;
   -webkit-transform: translate(-50%, -50%) rotate(45deg);

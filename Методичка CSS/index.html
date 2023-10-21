@@ -1,51 +1,478 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark.css" id="theme">
     <title>Методичка CSS</title>
 </head>
+
 <body>
-    <header>
+    <header id="top">
         <h1>CSS <br> Методичка</h1>
         <nav>
-                <a href="https://vk.com/neyru" ><img src="/images/vk1.png" alt="VK"></a>
-                <a href="https://t.me/NeYru"><img src="/images/tg.png" alt="Telegram" class="VK" width="32" height="32"></a>
-                <a href="https://github.com/NeYru07"><img src="/images/github-mark-white.png" alt="GitHub" class="git"></a>
+            <a href="https://vk.com/neyru" target="_blank"><img src="/images/vk1.png" alt="VK" class="VK"
+                    data-title="VK"></a>
+            <a href="https://t.me/NeYru" target="_blank"><img src="/images/tg.png" alt="Telegram" class="TG"
+                    data-title="Telegram"></a>
+            <a href="https://github.com/NeYru07" target="_blank"><img src="/images/github-mark-white.png" alt="GitHub"
+                    class="git" data-title="GitHub"></a>
         </nav>
+        <button id="switchMode">&#10040;</button>
     </header>
 
     <main>
         <section class="one">
             <h2>Содержание</h2>
             <p class="p">
-                На данном  сайте представлены способы реализации каких-либо HTML элементов с помощью CSS. <br> 
+                CSS (Cascading Style Sheets) - это язык стилей, который позволяет веб-разработчикам контролировать
+                внешний вид веб-страниц. Стили можно применять к различным HTML тегам, чтобы изменять их свойства, такие
+                как цвет, шрифт, размер, отступы и многое другое. В этом руководстве мы рассмотрим основные CSS стили,
+                которые можно применить к различным HTML тегам. <br>
+                Ниже представлены способы реализации каких-либо HTML элементов с помощью CSS. <br>
             </p>
             <p class="p2">Быстрый переход:</p>
-                <ul>        
-                    <li>CSS стили для текста</li>
-                    <li>CSS для контейнеров</li>
-                    <li>CSS для медии</li>
-                    <li>CSS для header-тегов</li>
-                </ul>
-            
+
+            <ul>
+                <li><a href="#css-text-tegs">CSS стили для текста</a></li>
+                <li><a href="#css-cont-tegs">CSS для контейнеров</a></li>
+                <li><a href="#css-media-tegs">CSS для медии</a></li>
+                <li><a href="#css-head-tegs">CSS для header-тегов</a></li>
+            </ul>
+
         </section>
+
+        <section class="css-text" id="css-text-tegs">
+            <div class="hp">
+                <h2>CSS стили для текста</h2>
+                <h4>HTML теги: h1-h6, p, span, ul, ol, li, a, em, i, q, s, b, code, button, input.</h4>
+            </div>
+            <div class="ff">
+                <h2>1. Сменить шрифт</h2>
+                <p>Чтобы изменить шрифт элемента, используйте CSS-свойство font-family:</p>
+                <pre>
+    <span class="red">body</span> {
+        <span class="blue">font-family</span>: <span class="green">'Roboto'</span>, Arial, sans-serif;
+    }
+                </pre>
+                <p class="marg">Первым указывается шрифт, который вы хотите добавить. После него через запятую идут
+                    альтернативные
+                    шрифты. Например, если на компьютере у посетителя сайта не установлен шрифт Roboto, браузер
+                    использует шрифт Arial.</p>
+            </div>
+
+            <div class="ff">
+                <h2>2. Изменить цвет и размер текста</h2>
+                <p>Цвет текста задаётся с помощью свойства <span class="underline">color</span>. Оно принимает значения
+                    в различных форматах: можно написать название цвета (red, blue), шестнадцатеричное значение
+                    (#ff0000, #00f) или функцию rgb(), чтобы задать <span class="underline">цвет</span> с помощью трёх
+                    чисел.</p>
+                <pre>
+    <span class="red">p</span> {
+        <span class="blue">color</span>: <span class="green">red</span>; <span class="pink">/* Красный с помощью слов */</span>
+        <span class="blue">color</span>: <span class="blue2">#ff0000</span>; <span class="pink">/* Красный с помощью HEX */</span>
+        <span class="blue">color</span>: <span class="green">rgb</span>(<span class="blue2">1,0,0</span>); <span class="pink">/* Красный с помощью rgb() */</span>
+    }
+                </pre>
+                <p>Размер текста меняется свойством font-size. Оно принимает значения в пикселях (px), процентах (%) и
+                    других единицах измерения.</p>
+                <pre>
+    <span class="red">h1</span> {
+        <span class="blue">font-size</span>: <span class="blue2">24px</span>;
+    }
+                </pre>
+            </div>
+
+            <div class="ff">
+                <h2>3. Добавить жирность</h2>
+                <p class="pad">Свойство font-weight задаёт <span class="underline">жирность текста</span>. Оно принимает
+                    два вида значений. <br>
+
+                    <b>Численные</b>: от 100 до 900. Например, 400 — обычный шрифт, а 700 — полужирный. <br>
+
+                    <b>Ключевые слова</b>: normal — обычный шрифт, bold — полужирный, bolder — жирнее, чем текущий,
+                    lighter —
+                    менее жирный шрифт по сравнению с текущим.
+                </p>
+
+                <pre>
+    <span class="red">p</span> {
+        <span class="blue">font-weight</span>: bold; <span class="pink">/* Полужирный с помощью ключевого слова */</span>
+        <span class="blue">font-weight</span>: <span class="blue2">700</span>; <span class="pink">/* Полужирный с помощью численного значения */</span>
+    }
+                </pre>
+            </div>
+
+            <div class="ff">
+                <h2>4. Сделать текст курсивным</h2>
+                <p>Для этого есть свойство font-style. По умолчанию у него стоит значение normal, то есть текст обычный,
+                    без курсива. Чтобы поменять начертание, используйте:
+
+                <ul>
+                    <li>italic — делает текст курсивным;</li>
+                    <li>oblique — делает текст наклонным.</li>
+                </ul>
+                </p>
+                <pre>
+    <span class="red">p</span> {
+        <span class="blue">font-style</span>: italic;
+    }
+                </pre>
+                <p class="marg">
+                    Оба значения создают похожий эффект — текст выглядит курсивным, но есть и разница. Если очень
+                    упростить, то italic и oblique немного отличаются в начертании. А ещё не у всех шрифтов есть
+                    специальная курсивная версия. В таких случаях oblique делает текст похожим на курсив.
+                </p>
+            </div>
+
+            <div class="ff">
+                <h2>5. Преобразовать текст</h2>
+                <p>
+                    Свойство text-transform меняет регистр текста. Оно принимает значения:
+                <ul>
+                    <li>none — без изменений, значение по умолчанию;</li>
+                    <li>uppercase — все буквы становятся прописными;</li>
+                    <li>lowercase — все буквы становятся строчными;</li>
+                    <li>capitalize — первая буква каждого слова находится в верхнем регистре. </li>
+                </ul>
+                </p>
+                <pre>
+    <span class="red">p</span> {
+        <span class="blue">text-transform</span>: uppercase;
+    }                
+                </pre>
+            </div>
+
+            <div class="ff">
+                <h2>6. Добавить подчёркивание</h2>
+                <p>
+                    Свойство <span class="underline">text-decoration</span> добавляет тексту декоративные эффекты:
+                <ul>
+                    <li>overline создаёт линию над текстом,</li>
+                    <li>line-through делает текст зачёркнутым,</li>
+                    <li>underline добавляет подчёркивание.</li>
+                </ul>
+                </p>
+                <pre>
+    <span class="red">p</span> {
+        <span class="blue">text-decoration</span>: overline;
+    } 
+                </pre>
+            </div>
+
+            <div class="ff">
+                <h2>7. Создать тень</h2>
+                <p>Свойство text-shadow <span class="underline">добавляет тексту тень</span>. Оно принимает значение в
+                    таком формате:</p>
+                <pre>
+                    <span class="red">p</span> {
+                        <span class="blue">text-shadow</span>: <span class="blue2">2px 2px 4px</span> <span class="green">rgba</span>(<span class="blue2">0, 0, 0, 0.5</span>);
+                        <span class="pink">/*смещение по горизонтали, смещение по вертикали, радиус размытия, цвет тени */</span>
+                    }
+                </pre>
+            </div>
+
+            <div class="ff">
+                <h2>8. Выровнять текст</h2>
+                <p>
+                    Свойство text-align выравнивает текст по горизонтали. Оно принимает значения:
+                <ul>
+                    <li>left — влево;</li>
+                    <li>right — вправо;</li>
+                    <li>center — по центру;</li>
+                    <li class="marg">justify — выравнивание по ширине.</li>
+                </ul>
+                </p>
+            </div>
+
+            <div class="ff">
+                <h2>9. Изменить высоту строки и межбуквенное расстояние</h2>
+                <p>Свойство line-height устанавливает высоту строки, указывая множитель относительно размера шрифта.
+                    Свойство letter-spacing управляет расстоянием между символами.</p>
+                <pre>
+    <span class="red">p</span> {
+        <sapn class="blue">line-height</sapn>: <span class="blue2">1.5</span>;
+        <sapn class="blue">letter-spacing</sapn>: <span class="blue2">2px</span>;
+        } 
+                </pre>
+            </div>
+
+            <div class="ff">
+                <h2>Нюансы</h2>
+                <ul>
+                    <li>У некоторых шрифтов нет жирного и курсивного варианта.</li>
+                    <li>
+                        Свойство text-shadow делает текст эффектным, но слишком насыщенные тени могут усложнить чтение
+                        текста или создать плохой контраст.
+                    </li>
+                    <li>
+                        Слишком большое или маленькое значение line-height и letter-spacing может нарушить интервалы
+                        между
+                        буквами и строками.
+                    </li>
+                    <li>
+                        При изменении размера шрифта (font-size) следует учитывать, что очень мелкий и крупный текст
+                        может
+                        <span class="underline">плохо отображаться</span> или стать нечитабельным.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="css-cont" id="css-cont-tegs">
+            <div class="hp">
+                <h2>CSS стили для контейнеров</h2>
+                <h4>HTML теги: div, section, header, footer, main.</h4>
+            </div>
+
+            <div class="ff">
+                <h2>1. Ширина и высота контейнера</h2>
+                <ul>
+                    <li><b>width</b> - устанавливает ширину контейнера.</li>
+                    <li><b>height</b> - устанавливает высоту контейнера.</li>
+                </ul>
+                <pre>
+    <span class="red">.container</span> {
+        <span class="blue">width</span>: <span class="blue2">300</span>px;
+        <span class="blue">height</span>: <span class="blue2">200</span>px;
+    }
+                </pre>
+            </div>
+
+            <div class="ff">
+                <h2>2. Цвет фона</h2>
+                <ul>
+                    <li><b>background-color</b> - устанавливает цвет фона контейнера.</li>
+                </ul>
+                <pre>
+    <span class="red">.container</span> {
+        <span class="blue">background-color</span>: <span class="blue2">#f0f0f0</span>;
+    }
+                </pre>
+            </div>
+
+            <div class="ff">
+                <h2>3. Границы контейнера</h2>
+                <ul>
+                    <li><b>border</b> - устанавливает стиль, толщину и цвет границы контейнера.</li>
+                </ul>
+
+                <pre>
+    <span class="red">.container</span> {
+        <span class="blue">border</span>: <span class="blue2">2</span>px solid <span class="blue2">#333</span>;
+    }
+                </pre>
+            </div>
+
+            <div class="ff">
+                <h2>4. Закругленные углы</h2>
+                <ul>
+                    <li><b>border-radius</b> - создает закругленные углы у контейнера.</li>
+                </ul>
+                <pre>
+    <span class="red">.container</span> {
+        <span class="blue">border-radius</span>: <span class="blue2">10</span>px;
+    }
+                </pre>
+            </div>
+
+            <div class="ff">
+                <h2>5. Отступы</h2>
+                <ul>
+                    <li><b>margin</b> - задает внешние отступы контейнера.</li>
+                    <li><b>padding</b> - устанавливает внутренние отступы контейнера.</li>
+                </ul>
+                <pre>
+    <span class="red">.container</span> {
+        <span class="blue">margin</span>: <span class="blue2">10</span>px;
+        <span class="blue">padding</span>: <span class="blue2">20</span>px;
+    }
+                </pre>
+            </div>
+
+            <div class="ff">
+                <h2>6. Тень</h2>
+                <ul>
+                    <li><b>box-shadow</b> - добавляет тень контейнеру.</li>
+                </ul>
+                <pre>
+    <span class="red">.container</span> {
+        <span class="blue">box-shadow</span>: <span class="blue2">2</span>px <span class="blue2">2</span>px <span class="blue2">5</span>px <span class="blue2">#888888</span>;
+    }
+                </pre>
+            </div>
+
+            <div class="ff">
+                <h2>7. Положение и выравнивание</h2>
+                <ul>
+                    <li><b>position</b> - устанавливает позицию контейнера.</li>
+                    <li><b>text-align</b> - выравнивает текст внутри контейнера.</li>
+                </ul>
+                <pre>
+    <span class="red">.container</span> {
+        <span class="blue">position</span>: relative;
+        <span class="blue">text-align</span>: center;
+    }
+                </pre>
+            </div>
+
+            <div class="ff">
+                <h2>8. Переполнение контента</h2>
+                <ul>
+                    <li><b>overflow</b> - управляет отображением содержимого, которое не помещается в контейнер.</li>
+                </ul>
+                <pre>
+    <span class="red">.container</span> {
+        <span class="blue">overflow</span>: scroll;
+    }
+                </pre>
+            </div>
+        </section>
+
+        <section class="css-media" id="css-media-tegs">
+            <div class="hp">
+                <h2>CSS стили для медии</h2>
+                <h4>HTML теги: img, video, svg.</h4>
+            </div>
+
+            <div class="ff">
+                <h2>1. Максимальная ширина изображения</h2>
+                <ul>
+                    <li><b>max-width</b> - устанавливает максимальную ширину изображения, чтобы оно не превышало
+                        реальный размер.</li>
+                </ul>
+                <pre>
+                    <span class="red">img</span> {
+                        <span class="blue">max-width</span>: <span class="blue2">100</span>%;
+                    }
+                </pre>
+            </div>
+
+            <div class="ff">
+                <h2>2. Выравнивание изображений и видео</h2>
+                <ul>
+                    <li><b>display</b> и <b>margin</b> - выравнивают изображения и видео по центру горизонтально.</li>
+                </ul>
+                <pre>
+    <span class="red">img</span>, <span class="red">video</span> {
+        <span class="blue">display</span>: block;
+        <span class="blue">margin</span>: <span class="blue2">0</span> auto;
+    }
+                </pre>
+            </div>
+
+            <div class="ff">
+                <h2>3. Отзывчивость</h2>
+                <ul>
+                    <li>Используйте медиа-запросы (<b>@media</b>) для настройки стилей в зависимости от размера экрана.
+                        <br>
+                        Например, если вы хотите изменить размер шрифта на маленьких экранах:
+                    </li>
+                </ul>
+                <pre>
+    <span class="blue">@media</span> (max-width: <span class="blue2">768</span>px) {
+        <span class="red">img</span> {
+            max-width: <span class="blue2">80</span>%;
+        }
+    }
+                </pre>
+            </div>
+
+            <div class="ff">
+                <h2>4. Аспектное соотношение</h2>
+                <ul>
+                    <li>Если вы хотите, чтобы медиа-элементы сохраняли свое аспектное соотношение, используйте <br>
+                        <b>padding-bottom</b> вместе с <b>position: relative</b>.
+                    </li>
+                </ul>
+                <pre>
+    <span class="red">.video-container</span> {
+        position: relative;
+        padding-bottom: <span class="blue2">56.25</span>%;
+    }
+    <span class="red">.video</span> {
+        position: absolute;
+        top: <span class="blue2">0</span>;
+        left: <span class="blue2">0</span>;
+        width: <span class="blue2">100</span>%;
+        height: <span class="blue2">100</span>%;
+    }
+                </pre>
+            </div>
+
+            <div class="ff">
+                <h2>5. Обводка для изображений</h2>
+                <ul>
+                    <li><b>border</b> - добавляет границу вокруг изображения.</li>
+                </ul>
+                <pre>
+    <span class="red">img</span> {
+        border: <span class="blue2">1</span>px solid <span class="blue2">#ccc</span>;
+    }
+                </pre>
+            </div>
+
+            <div class="ff">
+                <h2>6. Фильтры для изображений</h2>
+                <ul>
+                    <li><b>filter</b> - позволяет применять различные фильтры к изображению, такие как яркость и
+                        насыщенность.</li>
+                </ul>
+                <pre>
+                    <span class="red">img</span> {
+                        filter: brightness(<span class="blue2">150</span>%) saturate(<span class="blue2">120</span>%);
+                    }
+                </pre>
+            </div>
+        </section>
+
+        <section class="css-head" id="css-head-tegs">
+            <div class="hp">
+                <h2>CSS стили для head-тегов</h2>
+                <h4>HTML теги: link, meta.</h4>
+            </div>
+
+            <div class="ff">
+                <h2>1. Стили для ссылок <b><i>link</i></b></h2>
+                <ul>
+                    <li>Стилизация для тега <b><i>link</i></b> может быть полезной, если у вас есть различные стили для
+                        разных таблиц стилей (CSS).</li>
+                </ul>
+                <pre>
+    <span class="red">link</span>[rel=<span class="blue">"stylesheet"</span>] {
+        display: block;
+        margin: <span class="blue2">10</span>px <span class="blue2">0</span>;
+        text-transform: uppercase;
+    }
+                    
+                </pre>
+            </div>
+
+            <div class="ff">
+                <h2>2. Стили для метатегов <b><i>meta</i></b></h2>
+                <ul>
+                    <li>Метатеги могут быть стилизованы для более выразительного отображения, например, метатег
+                        <b><i>meta</i></b> для определения <b>charset</b>.</li>
+                </ul>
+                <pre>
+    <span class="red">meta</span>[charset=<span class="blue">"UTF-8"</span>] {
+        font-weight: bold;
+        color: <span class="blue2">#333</span>;
+    }
+                    
+                </pre>
+                <p>Стили для <b><i>link</i></b> и <b><i>meta</i></b> редко используются и чаще всего стилизация
+                    применяется к элементам внутри <b><i>body</i></b> для более значимого визуального отображения
+                    содержимого страницы.</p>
+            </div>
+        </section>
+
     </main>
 
+    <a href="#top" class="back-to-top"></a>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <script src="/js/script.js"></script>
 </body>
+
 </html>
