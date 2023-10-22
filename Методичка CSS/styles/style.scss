@@ -484,3 +484,167 @@ header{
     border-top: 5px solid #f5f0f6;
     border-left: 5px solid #f5f0f6;
 }
+
+
+
+
+
+@media (max-width: 1000px) {
+    *{
+        max-width: 1000px;
+    }
+    p{
+        width: 700px;
+    }
+    header{
+        height: 110px;
+        width: 1000px;
+            h1{
+                font-size: 28px;
+            }
+            nav{
+                width: 300px;
+                height: 50px;
+                margin: 38px 0 0 550px;
+                    img{
+                        width: 28px;
+                        height: 28px;
+                    }
+            }
+            button{
+                font-size: 30px;
+                width: 35px;
+                height: 35px;
+            }
+    }
+
+    .one{
+        width: 500px;
+        height: 395px;
+            h2{
+                font-size: 32px;
+            }
+            .p{
+                font-size: 18px;
+            }
+            .p2{
+                font-size: 16px;
+            }
+            li{
+                font-size: 14px;
+            }
+    }
+
+    .css-text{
+        width: 500px;
+        height: 2500px;
+       margin-left: 50px;
+        .hp{
+            h2{
+                font-size: 32px;
+            }
+            h4{
+                font-size: 18px;
+            }
+        }
+        .ff{
+            h2{
+                font-size: 24px;
+            }
+            p{
+                font-size: 12px;
+            }
+            pre{
+                font-size: 12px;
+            }
+            ul li{
+                font-size: 12px;
+            }
+        }
+    }
+
+    .css-cont{
+        width: 500px;
+        height: 2500px;
+        margin-left: 50px;
+        .hp{
+            h2{
+                font-size: 32px;
+            }
+            h4{
+                font-size: 18px;
+            }
+        }
+        .ff{
+            h2{
+                font-size: 24px;
+            }
+            p{
+                font-size: 12px;
+            }
+            pre{
+                font-size: 12px;
+            }
+            ul li{
+                font-size: 12px;
+            }
+        }
+    }
+
+    .css-media{
+        width: 500px;
+        height: 2500px;
+       margin-left: 50px;
+        .hp{
+            h2{
+                font-size: 32px;
+            }
+            h4{
+                font-size: 18px;
+            }
+        }
+        .ff{
+            h2{
+                font-size: 24px;
+            }
+            p{
+                font-size: 12px;
+            }
+            pre{
+                font-size: 12px;
+            }
+            ul li{
+                font-size: 12px;
+            }
+        }
+    }
+
+    .css-head{
+        width: 500px;
+        height: 2500px;
+       margin-left: 50px;
+        .hp{
+            h2{
+                font-size: 32px;
+            }
+            h4{
+                font-size: 18px;
+            }
+        }
+        .ff{
+            h2{
+                font-size: 24px;
+            }
+            p{
+                font-size: 12px;
+            }
+            pre{
+                font-size: 12px;
+            }
+            ul li{
+                font-size: 12px;
+            }
+        }
+    }
+}
+

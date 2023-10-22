@@ -502,3 +502,141 @@ header .git:hover::after {
   border-top: 5px solid #f5f0f6;
   border-left: 5px solid #f5f0f6;
 }
+
+@media (max-width: 1000px) {
+  * {
+    max-width: 1000px;
+  }
+  p {
+    width: 700px;
+  }
+  header {
+    height: 110px;
+    width: 1000px;
+  }
+  header h1 {
+    font-size: 28px;
+  }
+  header nav {
+    width: 300px;
+    height: 50px;
+    margin: 38px 0 0 550px;
+  }
+  header nav img {
+    width: 28px;
+    height: 28px;
+  }
+  header button {
+    font-size: 30px;
+    width: 35px;
+    height: 35px;
+  }
+  .one {
+    width: 500px;
+    height: 395px;
+  }
+  .one h2 {
+    font-size: 32px;
+  }
+  .one .p {
+    font-size: 18px;
+  }
+  .one .p2 {
+    font-size: 16px;
+  }
+  .one li {
+    font-size: 14px;
+  }
+  .css-text {
+    width: 500px;
+    height: 2500px;
+    margin-left: 50px;
+  }
+  .css-text .hp h2 {
+    font-size: 32px;
+  }
+  .css-text .hp h4 {
+    font-size: 18px;
+  }
+  .css-text .ff h2 {
+    font-size: 24px;
+  }
+  .css-text .ff p {
+    font-size: 12px;
+  }
+  .css-text .ff pre {
+    font-size: 12px;
+  }
+  .css-text .ff ul li {
+    font-size: 12px;
+  }
+  .css-cont {
+    width: 500px;
+    height: 2500px;
+    margin-left: 50px;
+  }
+  .css-cont .hp h2 {
+    font-size: 32px;
+  }
+  .css-cont .hp h4 {
+    font-size: 18px;
+  }
+  .css-cont .ff h2 {
+    font-size: 24px;
+  }
+  .css-cont .ff p {
+    font-size: 12px;
+  }
+  .css-cont .ff pre {
+    font-size: 12px;
+  }
+  .css-cont .ff ul li {
+    font-size: 12px;
+  }
+  .css-media {
+    width: 500px;
+    height: 2500px;
+    margin-left: 50px;
+  }
+  .css-media .hp h2 {
+    font-size: 32px;
+  }
+  .css-media .hp h4 {
+    font-size: 18px;
+  }
+  .css-media .ff h2 {
+    font-size: 24px;
+  }
+  .css-media .ff p {
+    font-size: 12px;
+  }
+  .css-media .ff pre {
+    font-size: 12px;
+  }
+  .css-media .ff ul li {
+    font-size: 12px;
+  }
+  .css-head {
+    width: 500px;
+    height: 2500px;
+    margin-left: 50px;
+  }
+  .css-head .hp h2 {
+    font-size: 32px;
+  }
+  .css-head .hp h4 {
+    font-size: 18px;
+  }
+  .css-head .ff h2 {
+    font-size: 24px;
+  }
+  .css-head .ff p {
+    font-size: 12px;
+  }
+  .css-head .ff pre {
+    font-size: 12px;
+  }
+  .css-head .ff ul li {
+    font-size: 12px;
+  }
+}
