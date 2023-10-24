@@ -12,11 +12,11 @@
     <header id="top">
         <h1>CSS <br> Методичка</h1>
         <nav>
-            <a href="https://vk.com/neyru" target="_blank"><img src="/images/vk1.png" alt="VK" class="VK"
+            <a href="https://vk.com/neyru" target="_blank"><img src="images/vk1.png" alt="VK" class="VK"
                     data-title="VK"></a>
-            <a href="https://t.me/NeYru" target="_blank"><img src="/images/tg.png" alt="Telegram" class="TG"
+            <a href="https://t.me/NeYru" target="_blank"><img src="images/tg.png" alt="Telegram" class="TG"
                     data-title="Telegram"></a>
-            <a href="https://github.com/NeYru07" target="_blank"><img src="/images/github-mark-white.png" alt="GitHub"
+            <a href="https://github.com/NeYru07" target="_blank"><img src="images/github-mark-white.png" alt="GitHub"
                     class="git" data-title="GitHub"></a>
         </nav>
         <button id="switchMode">&#10040;</button>
@@ -212,7 +212,8 @@
                         буквами и строками.
                     </li>
                     <li>
-                        При изменении размера шрифта (font-size) следует учитывать, что очень мелкий и крупный текст <br>
+                        При изменении размера шрифта (font-size) следует учитывать, что очень мелкий и крупный текст
+                        <br>
                         может
                         <span class="underline">плохо отображаться</span> или стать нечитабельным.
                     </li>
@@ -328,6 +329,18 @@
     }
                 </pre>
             </div>
+
+            <div class="ff">
+                <h2>9. Контейнер, выровненный по центру страницы</h2>
+                <p>Для того чтобы выровнять контейнер по центру страницы, нужно, при настройке его внешних отступов,
+                    воспользоваться значением auto для левого и правого отступов:</p>
+                <pre>
+    <span class="red">.container</span> {
+        <span class="blue">max-width</span>: <span class="blue2">1170</span>px;
+        <span class="blue">margin</span>: <span class="blue2">0</span> auto;
+    } 
+                </pre>
+            </div>
         </section>
 
         <section class="css-media" id="css-media-tegs">
@@ -425,6 +438,16 @@
                     }
                 </pre>
             </div>
+
+            <div class="ff">
+                <h2>7. Background изображение</h2>
+                <p>При помощи свойства <b>background</b> можно установить изображение н задний фон</p>
+                <pre>
+    <span class="red">.element</span> {
+        <span class="blue">background</span>: <span class="blue2">url</span>(<span class="green">'cool.jpg'</span>);
+    }
+                </pre>
+            </div>
         </section>
 
         <section class="css-head" id="css-head-tegs">
@@ -453,7 +476,8 @@
                 <h2>2. Стили для метатегов <b><i>meta</i></b></h2>
                 <ul>
                     <li>Метатеги могут быть стилизованы для более выразительного отображения, например, метатег
-                        <b><i>meta</i></b> для определения <b>charset</b>.</li>
+                        <b><i>meta</i></b> для определения <b>charset</b>.
+                    </li>
                 </ul>
                 <pre>
     <span class="red">meta</span>[charset=<span class="blue">"UTF-8"</span>] {
@@ -470,9 +494,14 @@
 
     </main>
 
+    <footer>
+            <h4>2023, by NeYru</h4>
+    </footer>
+
+
     <a href="#top" class="back-to-top"></a>
 
-    <script src="/js/script.js"></script>
+    <script src="/Методичка CSS/js/script.js"></script>
 </body>
 
 </html>
